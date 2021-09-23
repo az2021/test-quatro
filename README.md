@@ -1,6 +1,8 @@
 ### installation
 -Avoir une version récent de expo cli 
+
 -Lancer npm install
+
 -Lance expo start
 ### Process 
 -Après démarage du onboarding cliquer sur skip , puis skip encore pour passer les vues de onboarding
