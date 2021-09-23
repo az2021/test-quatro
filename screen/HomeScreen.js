@@ -69,8 +69,15 @@ const styles = StyleSheet.create({
     },
     search:{
       position: "absolute",
-      backgroundColor:"red",
-      top:0
+      backgroundColor:"white",
+      top:15,
+      borderRadius: 15,
+      width:"90%",
+      height:50,
+      alignSelf:"center",
+      flexDirection:"row",
+      justifyContent:"space-evenly",
+      alignItems:"center"
     }
 })
 

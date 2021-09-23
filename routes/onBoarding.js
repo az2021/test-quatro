@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import onBoardStepOneScreen from '../screen/onBoardStepOneScreen';
 import onBoardStepTwoScreen from '../screen/onBoardStepTwoScreen';
 import Home from './Home';
+import DetailsScreen from '../screen/DetailsScreen';
 
 
 
@@ -12,7 +13,8 @@ import Home from './Home';
 
 const Stack = createNativeStackNavigator();
 
-function OnBoarding() {
+function OnBoarding({users}) {
+    
   return (
     <NavigationContainer>
       <Stack.Navigator>
@@ -22,6 +24,7 @@ function OnBoarding() {
         <Stack.Screen name="two" component={onBoardStepTwoScreen} options={{
             headerShown: false
         }}/>
+        <Stack.Screen name="Details" component={DetailsScreen} />
         <Stack.Screen name="home" component={Home} options={{
             headerShown: false
         }}/>

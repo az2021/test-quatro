@@ -1,14 +1,15 @@
 import React from 'react';
 import {View, StyleSheet,Text} from 'react-native';
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { MaterialCommunityIcons,MaterialIcons  } from "@expo/vector-icons";
 import { NavigationContainer } from "@react-navigation/native";
 import HomeScreen from '../screen/HomeScreen';
+import MapScreen from '../screen/MapScreen';
 const Tab = createBottomTabNavigator();
 const Screen = () => {
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Home Screen</Text>
+      <Text>Screen</Text>
     </View>
     );
 }
@@ -27,11 +28,11 @@ const Home = () => {
             />
             
             <Tab.Screen
-                name="Account"
-                component={Screen}
+                name="Restaurant"
+                component={MapScreen}
                 options={{
                     tabBarIcon: ({ color, size }) => (
-                        <MaterialCommunityIcons name="account" color={color} size={size} />
+                        <MaterialIcons name="shopping-cart" size={size} color={color} />
                     ),
                 }}
             />
@@ -41,7 +42,7 @@ const Home = () => {
                 options={({ navigation }) => ({
                     tabBarIcon: ({ color, size }) => (
                         <MaterialCommunityIcons
-                            name="shopping"
+                            name="account"
                             color={color}
                             size={size}
                         />
